@@ -3,6 +3,7 @@ import './core/app.js';
 
 import logo from './logo.svg';
 import './App.css';
+import { Provider } from "react-redux";
 import { store } from "./store.js";
 
 class VGApp extends Component {
@@ -20,10 +21,12 @@ class VGApp extends Component {
     );
   }
 
-  _stateChanged(props){
+}
 
+const mapStateToProps = state => {
+  return {
+    todos: state.app.name
   }
-
 }
 
 export default VGApp;
